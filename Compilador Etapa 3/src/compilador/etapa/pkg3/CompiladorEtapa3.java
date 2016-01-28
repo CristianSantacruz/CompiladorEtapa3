@@ -43,8 +43,8 @@ public class CompiladorEtapa3 {
                         archSintactico = args[1];
                     } else {
                         System.out.println("\n*** Procesando archivo default ***\n");
-                        archLexico = "C:/Users/Cristian/Desktop/Compilador.Etapa2/Compilador Etapa 3/src/compilador/etapa/pkg3/Lexico.flex";
-                        archSintactico = "C:/Users/Cristian/Desktop/Compilador.Etapa2/Compilador Etapa 3/src/compilador/etapa/pkg3/Sintactico.cup";
+                        archLexico = "Lexico.flex";
+                        archSintactico = "Sintactico.cup";
                     }
                     String[] alexico = {archLexico};
                     String[] asintactico = {"-parser", "AnalizadorSintactico", archSintactico};
