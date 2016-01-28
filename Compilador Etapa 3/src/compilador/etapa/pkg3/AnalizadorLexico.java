@@ -4,6 +4,7 @@ package compilador.etapa.pkg3;
 
 import java_cup.runtime.*;
 import java.io.Reader;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -131,7 +132,7 @@ class AnalizadorLexico implements java_cup.runtime.Scanner {
     "\1\2\1\3\1\4\1\5\1\6\1\4\1\7\1\4"+
     "\1\10\1\11\1\4\1\12\1\13\1\4\1\14\2\4"+
     "\1\15\1\16\1\4\1\2\1\17\1\20\1\21\1\22"+
-    "\1\20\1\2\1\23\1\24\1\25\1\26\1\27\1\30"+
+    "\1\20\1\0\1\23\1\24\1\25\1\26\1\27\1\30"+
     "\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\20"+
     "\1\40\1\41\1\4\1\42\56\0\1\4\1\43\1\4"+
     "\1\44\14\4\2\0\3\4\23\0\4\4\1\0\20\4"+
@@ -694,7 +695,7 @@ private Symbol symbol(int type, Object value) {
 
       switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
         case 1: 
-          { throw new Error("Caracter ilegal <"+yytext()+">");
+          { JOptionPane.showMessageDialog(null, "Error Léxico   Línea: " + (yyline+1) + "   Columna: " + (yycolumn+1) + "   Caracter: " + yytext());
           }
         case 40: break;
         case 2: 

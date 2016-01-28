@@ -2,6 +2,7 @@ package compilador.etapa.pkg3;
 
 import java_cup.runtime.*;
 import java.io.FileReader;
+import javax.swing.JOptionPane;
 
 parser code {:
     
@@ -18,6 +19,7 @@ parser code {:
         }
         m.append(" : "+message);
         System.err.println(m);
+        JOptionPane.showMessageDialog(null,m);
     }
    
     /* Cuando se encuentra un error de donde el sistema no puede

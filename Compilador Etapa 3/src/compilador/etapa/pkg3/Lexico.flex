@@ -2,6 +2,7 @@ package compilador.etapa.pkg3;
 
 import java_cup.runtime.*;
 import java.io.Reader;
+import javax.swing.JOptionPane;
 
 %%
 %class AnalizadorLexico
@@ -90,4 +91,4 @@ espacios = [ \t\r\n]
 
 }
 
-[^]                    { throw new Error("Caracter ilegal <"+yytext()+">"); }
+.  {JOptionPane.showMessageDialog(null, "Error Léxico   Línea: " + (yyline+1) + "   Columna: " + (yycolumn+1) + "   Caracter: " + yytext());}

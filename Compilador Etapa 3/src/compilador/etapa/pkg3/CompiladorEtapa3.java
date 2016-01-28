@@ -14,20 +14,18 @@ import java.util.logging.Logger;
 public class CompiladorEtapa3 {
     
     public final static int GENERAR = 1;
-    public final static int EJECUTAR = 2;
-    public final static int SALIR = 3;
+    public final static int SALIR = 2;
 
     public static void main(String[] args) {
         
-//        InterfazCompilador vista = new InterfazCompilador();
-       // vista.show();
+        InterfazCompilador vista = new InterfazCompilador();
+        vista.show();
         java.util.Scanner in = new Scanner(System.in);
         int valor = 0;
         do {
             System.out.println("Elija una opcion: ");
             System.out.println("1) Generar");
-            System.out.println("2) Ejecutar");
-            System.out.println("3) Salir");
+            System.out.println("2) Salir");
             System.out.print("Opcion: ");
             valor = in.nextInt();
             switch (valor) {
@@ -66,15 +64,7 @@ public class CompiladorEtapa3 {
                     System.out.println("Generado!");
                     break;
                 }
-                case EJECUTAR: {
-                    /*  Ejecutamos el analizador lexico y sintactico
-                     sobre un archivo de pruebas. 
-                     */
-                    String[] archivoPrueba = {"test.txt"};
-                    AnalizadorSintactico.main(archivoPrueba);
-                    System.out.println("Ejecutado!");
-                    break;
-                }
+                
                 case SALIR: {
                     System.out.println("Adios!");
                     break;
@@ -84,7 +74,7 @@ public class CompiladorEtapa3 {
                     break;
                 }
             }
-        } while (valor != 3);
+        } while (valor != 2);
 
     }
 
